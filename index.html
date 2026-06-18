@@ -3,105 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EstuCard - Carnets Académicos</title>
+<title>EstuCard</title>
+
+<!-- Fuente bonita -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#f2f6ff;
-    color:#222;
+    font-family:'Poppins', sans-serif;
+    display:flex;
+    background:#f4fff7;
+    color:#1b1b1b;
 }
 
-/* HERO */
-.hero{
-    background:#0b2a5b;
+/* SIDEBAR */
+.sidebar{
+    width:260px;
+    background:#0f3d2e;
     color:white;
-    padding:70px 20px;
-    text-align:center;
+    height:100vh;
+    position:sticky;
+    top:0;
+    padding:25px;
 }
 
-.hero h1{
-    font-size:3rem;
-    margin:0;
+.sidebar h2{
+    margin-top:0;
+    font-size:1.6rem;
 }
 
-.hero p{
-    margin-top:10px;
-    font-size:1.1rem;
-    opacity:0.9;
+.sidebar a{
+    display:block;
+    color:#c8ffe0;
+    text-decoration:none;
+    margin:15px 0;
+    font-weight:500;
+}
+
+.sidebar a:hover{
+    color:white;
+}
+
+/* CONTENIDO */
+.content{
+    flex:1;
+    padding:40px;
+}
+
+/* HERO DIFERENTE */
+.hero{
+    background:linear-gradient(135deg,#0f3d2e,#1faa59);
+    color:white;
+    padding:40px;
+    border-radius:18px;
 }
 
 /* SECCIONES */
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
-}
-
-.section-title{
-    font-size:1.8rem;
-    color:#0b2a5b;
-    margin-bottom:20px;
-    border-left:6px solid #3b82f6;
-    padding-left:10px;
-}
-
-/* CARD HORIZONTAL */
-.card{
+.section{
+    margin-top:30px;
     background:white;
-    border-radius:15px;
     padding:25px;
+    border-radius:15px;
     box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
-/* BENEFICIOS NUEVO ESTILO */
-.grid{
+h2{
+    color:#0f3d2e;
+    margin-top:0;
+}
+
+/* BENEFICIOS EN COLUMNAS ALTERNAS */
+.beneficios{
     display:flex;
-    flex-wrap:wrap;
-    gap:15px;
+    flex-direction:column;
+    gap:12px;
+}
+
+.beneficio{
+    background:#e9fff1;
+    padding:15px;
+    border-left:6px solid #1faa59;
+    border-radius:10px;
+}
+
+/* CARNET */
+.carnet{
+    background:white;
+    border:2px solid #1faa59;
+    padding:20px;
+    border-radius:15px;
+    width:300px;
+}
+
+/* INTEGRANTES */
+.lista{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
 }
 
 .item{
-    flex:1;
-    min-width:220px;
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    border:1px solid #e6e6e6;
-}
-
-.item h3{
-    color:#2563eb;
-    margin-bottom:8px;
-}
-
-/* CARNET DEMO */
-.carnet{
-    background:linear-gradient(135deg,#1e3a8a,#3b82f6);
-    color:white;
-    border-radius:15px;
-    padding:20px;
-    max-width:350px;
-    margin:auto;
-}
-
-.carnet img{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    background:white;
-    display:block;
-    margin-bottom:10px;
+    background:#e9fff1;
+    padding:10px;
+    border-radius:10px;
 }
 
 /* FOOTER */
 footer{
+    margin-top:30px;
     text-align:center;
-    padding:20px;
-    background:#0b2a5b;
-    color:white;
-    margin-top:40px;
+    color:#0f3d2e;
+    font-weight:500;
 }
 </style>
 
@@ -109,74 +122,68 @@ footer{
 
 <body>
 
-<div class="hero">
-    <h1>EstuCard</h1>
-    <p>Carnets académicos modernos para una identidad estudiantil más organizada</p>
+<div class="sidebar">
+    <h2>EstuCard</h2>
+    <a href="#inicio">Inicio</a>
+    <a href="#quees">¿Qué es?</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#carnet">Ejemplo</a>
+    <a href="#integrantes">Integrantes</a>
 </div>
 
-<div class="container">
+<div class="content">
 
-    <h2 class="section-title">¿Qué es EstuCard?</h2>
-    <div class="card">
-        EstuCard es un proyecto escolar que crea carnets académicos personalizados para mejorar la identificación de estudiantes de manera rápida, segura y moderna dentro de la institución.
+    <div class="hero" id="inicio">
+        <h1>EstuCard</h1>
+        <p>Carnets académicos modernos, simples y organizados</p>
     </div>
 
-</div>
+    <div class="section" id="quees">
+        <h2>¿Qué es EstuCard?</h2>
+        <p>
+            EstuCard es un proyecto escolar que crea carnets académicos personalizados para mejorar la identificación de estudiantes de forma moderna, rápida y segura dentro de la institución.
+        </p>
+    </div>
 
-<div class="container">
+    <div class="section" id="beneficios">
+        <h2>Beneficios</h2>
 
-    <h2 class="section-title">Beneficios</h2>
-
-    <div class="grid">
-        <div class="item">
-            <h3>Seguridad</h3>
-            <p>Permite identificar estudiantes de forma clara y confiable.</p>
-        </div>
-
-        <div class="item">
-            <h3>Organización</h3>
-            <p>Mejora el control dentro de la institución educativa.</p>
-        </div>
-
-        <div class="item">
-            <h3>Tecnología</h3>
-            <p>Introduce una forma moderna de identificación escolar.</p>
-        </div>
-
-        <div class="item">
-            <h3>Diseño</h3>
-            <p>Carnets personalizados con apariencia profesional.</p>
+        <div class="beneficios">
+            <div class="beneficio">Seguridad en la identificación de estudiantes</div>
+            <div class="beneficio">Mejor organización escolar</div>
+            <div class="beneficio">Uso de tecnología moderna</div>
+            <div class="beneficio">Diseño limpio y profesional</div>
         </div>
     </div>
 
-</div>
+    <div class="section" id="carnet">
+        <h2>Ejemplo de Carnet</h2>
 
-<div class="container">
-
-    <h2 class="section-title">Ejemplo de Carnet</h2>
-
-    <div class="carnet">
-        <img>
-        <h3>Estudiante: Juan Pérez</h3>
-        <p>Grado: 5to de secundaria</p>
-        <p>ID: EC-2026-001</p>
+        <div class="carnet">
+            <h3>ESTUCARD</h3>
+            <p><b>Nombre:</b> Juan Pérez</p>
+            <p><b>Grado:</b> 5to Secundaria</p>
+            <p><b>ID:</b> EC-2026-001</p>
+        </div>
     </div>
 
-</div>
+    <div class="section" id="integrantes">
+        <h2>Integrantes</h2>
 
-<div class="container">
-
-    <h2 class="section-title">Integrantes</h2>
-
-    <div class="card">
-        Agrega aquí los nombres de los integrantes del proyecto EstuCard.
+        <div class="lista">
+            <div class="item">Adrian Villarroel</div>
+            <div class="item">Luciana Quispe</div>
+            <div class="item">Luis Vilca</div>
+            <div class="item">Brayan Flores</div>
+            <div class="item">Aaron Diaz</div>
+        </div>
     </div>
 
-</div>
+    <footer>
+        EstuCard © 2026
+    </footer>
 
-<footer>
-    EstuCard © 2026 - Proyecto Escolar
-</footer>
+</div>
 
 </body>
 </html>
