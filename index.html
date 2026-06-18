@@ -1,85 +1,106 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EstuCard: Carnets Académicos</title>
+<title>EstuCard - Carnets Académicos</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
 body{
-    background:linear-gradient(to bottom,#eef5ff,#ffffff);
-    color:#333;
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f6ff;
+    color:#222;
 }
 
-header{
-    background:linear-gradient(135deg,#0d47a1,#42a5f5);
+/* HERO */
+.hero{
+    background:#0b2a5b;
     color:white;
+    padding:70px 20px;
     text-align:center;
-    padding:90px 20px;
 }
 
-header h1{
-    font-size:4rem;
-    margin-bottom:15px;
+.hero h1{
+    font-size:3rem;
+    margin:0;
 }
 
-header p{
-    font-size:1.3rem;
+.hero p{
+    margin-top:10px;
+    font-size:1.1rem;
+    opacity:0.9;
 }
 
-section{
-    max-width:1100px;
+/* SECCIONES */
+.container{
+    max-width:1000px;
     margin:auto;
-    padding:60px 20px;
+    padding:40px 20px;
 }
 
-h2{
-    text-align:center;
-    color:#0d47a1;
-    margin-bottom:25px;
-    font-size:2rem;
+.section-title{
+    font-size:1.8rem;
+    color:#0b2a5b;
+    margin-bottom:20px;
+    border-left:6px solid #3b82f6;
+    padding-left:10px;
 }
 
+/* CARD HORIZONTAL */
 .card{
     background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    line-height:1.7;
-}
-
-.beneficios{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-
-.beneficio{
-    background:white;
+    border-radius:15px;
     padding:25px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
-.beneficio h3{
-    color:#1565c0;
+/* BENEFICIOS NUEVO ESTILO */
+.grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.item{
+    flex:1;
+    min-width:220px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid #e6e6e6;
+}
+
+.item h3{
+    color:#2563eb;
+    margin-bottom:8px;
+}
+
+/* CARNET DEMO */
+.carnet{
+    background:linear-gradient(135deg,#1e3a8a,#3b82f6);
+    color:white;
+    border-radius:15px;
+    padding:20px;
+    max-width:350px;
+    margin:auto;
+}
+
+.carnet img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:white;
+    display:block;
     margin-bottom:10px;
 }
 
+/* FOOTER */
 footer{
-    background:#0d47a1;
-    color:white;
     text-align:center;
-    padding:25px;
+    padding:20px;
+    background:#0b2a5b;
+    color:white;
     margin-top:40px;
 }
 </style>
@@ -88,60 +109,73 @@ footer{
 
 <body>
 
-<header>
-    <h1>🎓 EstuCard</h1>
-    <p>Carnets Académicos Inteligentes para una educación moderna y organizada</p>
-</header>
+<div class="hero">
+    <h1>EstuCard</h1>
+    <p>Carnets académicos modernos para una identidad estudiantil más organizada</p>
+</div>
 
-<section>
-    <h2>¿Qué es EstuCard?</h2>
+<div class="container">
+
+    <h2 class="section-title">¿Qué es EstuCard?</h2>
     <div class="card">
-        EstuCard es un emprendimiento educativo que busca modernizar la identificación estudiantil mediante la creación de carnets académicos personalizados. Permite identificar a los estudiantes de forma rápida, segura y profesional.
-    </div>
-</section>
-
-<section>
-    <h2>Beneficios</h2>
-
-```
-<div class="beneficios">
-    <div class="beneficio">
-        <h3>Seguridad</h3>
-        <p>Mayor control e identificación de estudiantes.</p>
+        EstuCard es un proyecto escolar que crea carnets académicos personalizados para mejorar la identificación de estudiantes de manera rápida, segura y moderna dentro de la institución.
     </div>
 
-    <div class="beneficio">
-        <h3>Organización</h3>
-        <p>Facilita la gestión académica y administrativa.</p>
-    </div>
-
-    <div class="beneficio">
-        <h3>Modernización</h3>
-        <p>Uso de tecnología para mejorar procesos escolares.</p>
-    </div>
-
-    <div class="beneficio">
-        <h3>Diseño Profesional</h3>
-        <p>Carnets modernos y personalizados.</p>
-    </div>
 </div>
-```
 
-</section>
+<div class="container">
 
-<section>
-    <h2>Integrantes</h2>
+    <h2 class="section-title">Beneficios</h2>
 
-```
-<div class="card">
-    Agrega aquí los nombres de los integrantes del proyecto.
+    <div class="grid">
+        <div class="item">
+            <h3>Seguridad</h3>
+            <p>Permite identificar estudiantes de forma clara y confiable.</p>
+        </div>
+
+        <div class="item">
+            <h3>Organización</h3>
+            <p>Mejora el control dentro de la institución educativa.</p>
+        </div>
+
+        <div class="item">
+            <h3>Tecnología</h3>
+            <p>Introduce una forma moderna de identificación escolar.</p>
+        </div>
+
+        <div class="item">
+            <h3>Diseño</h3>
+            <p>Carnets personalizados con apariencia profesional.</p>
+        </div>
+    </div>
+
 </div>
-```
 
-</section>
+<div class="container">
+
+    <h2 class="section-title">Ejemplo de Carnet</h2>
+
+    <div class="carnet">
+        <img>
+        <h3>Estudiante: Juan Pérez</h3>
+        <p>Grado: 5to de secundaria</p>
+        <p>ID: EC-2026-001</p>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <h2 class="section-title">Integrantes</h2>
+
+    <div class="card">
+        Agrega aquí los nombres de los integrantes del proyecto EstuCard.
+    </div>
+
+</div>
 
 <footer>
-    <p>EstuCard © 2026 - Proyecto Escolar</p>
+    EstuCard © 2026 - Proyecto Escolar
 </footer>
 
 </body>
